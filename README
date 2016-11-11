@@ -8,9 +8,13 @@ extract it to the root of your SD card and run it from the Homebrew Launcher.
 installer BEFORE doing the system update and select the NEW system version when
 asked.***
 
+To run the exploit just go to the offline Hunters Hub and try posting an event
+quest or challenge quest, depending on which you selected when installing.
+
 To uninstall the exploit, select the "Download" option in the game's main menu
 and re-download the first challenge or event quest (depending on which you
-selected while installing).
+selected while installing). Keep this in mind when using the "Download" option
+normally so that you don't accidentally uninstall the exploit.
 
 There are some notable limitations for this exploit:
   * It only works on New 3DS systems. This is because game uses extended memory
@@ -18,6 +22,11 @@ There are some notable limitations for this exploit:
   * It must be installed on the system you want to use it on. This is because
     the exploit uses the game's ExtData which is stored on the SD card, not the
     game cart.
+  * You will no longer be able to post certain quests in the Hunters Hub. If
+    you install the exploit as an event quest, you wont be able to post event
+    quests. If you install the exploit as a challenge quest, you wont be able to
+    post challenge quests. But you should still be able to join event/challenge
+    quests that other players post.
 
 For more information about the exploit, see this repo:
   https://github.com/svanheulen/genhax
