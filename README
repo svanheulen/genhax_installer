@@ -4,9 +4,20 @@ Monster Hunter Generations.
 To install the exploit, download the latest version from the release page,
 extract it to the root of your SD card and run it from the Homebrew Launcher.
 
+***Also, when a new system version is released, you need to re-run the
+installer BEFORE doing the system update and select the NEW system version when
+asked.***
+
 To uninstall the exploit, select the "Download" option in the game's main menu
 and re-download the first challenge or event quest (depending on which you
 selected while installing).
+
+There are some notable limitations for this exploit:
+  * It only works on New 3DS systems. This is because game uses extended memory
+    mode on Old 3DS systems.
+  * It must be installed on the system you want to use it on. This is because
+    the exploit uses the game's ExtData which is stored on the SD card, not the
+    game cart.
 
 For more information about the exploit, see this repo:
   https://github.com/svanheulen/genhax
