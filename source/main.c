@@ -272,7 +272,7 @@ int main(int argc, char* argv[]) {
     while (aptMainLoop()) {
         FS_Archive extdata;
         Handle system;
-        int game = select_game("\x1b[32;1mGenHax Installer (v1.0.0)\x1b[0m\n\nSelect a game ...", "Selected game ...", &extdata, &system);
+        int game = select_game("\x1b[32;1mGenHax Installer (v1.0.1)\x1b[0m\n\nSelect a game ...", "Selected game ...", &extdata, &system);
         char file_path[50] = "";
         if (game == -1)
             break;
