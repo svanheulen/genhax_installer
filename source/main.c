@@ -256,9 +256,8 @@ int install_quest(Handle system, char* file_path, int type, int large) {
         ui_pause("Error: Unable to write exploit quest");
         return 0;
     }
-    int installed_bits[] = {0, 0, 0, 0, 0};
-    installed_bits[type] = 1;
-    if (FSFILE_Write(system, NULL, section_offset + INSTALLED_OFFSET, installed_bits, 20, FS_WRITE_FLUSH) != 0) {
+    int installed_bits[] = {1, 0, 0, 0};
+    if (FSFILE_Write(system, NULL, section_offset + INSTALLED_OFFSET + (type ? 4 : 0), installed_bits, (type ? 16 : 4), FS_WRITE_FLUSH) != 0) {
         ui_info_add("\x1b[31;1mfailure.\x1b[0m\n");
         ui_pause("Error: Unable to write installed quests info");
         return 0;
