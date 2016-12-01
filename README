@@ -5,9 +5,10 @@ game, using the latest game updates.
 To install the exploit, download the latest version from the release page,
 extract it to the root of your SD card and run it from the Homebrew Launcher.
 
-***Also, when a new system version is released, you need to re-run the
-installer BEFORE doing the system update and select the NEW system version when
-asked.***
+***As of genhax v2.0.0 you no longer need to re-install before doing a system
+update. Hold the "R" button when you trigger the exploit to start the internal
+updater. A screen should then display that will allow you to pick your system
+version and region.***
 
 To run the exploit just go to the offline Hunters Hub and try posting an event
 quest or challenge quest, depending on which you selected when installing.
