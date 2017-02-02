@@ -262,6 +262,16 @@ int install_quest(Handle system, char* file_path, int type, int large) {
         ui_pause("Error: Unable to write installed quests info");
         return 0;
     }
+    int quest_delete[] = {0, 0};
+    Result res = 0;
+    for (int i = 1; i < (type ? 120 : 20); i++) {
+        res |= FSFILE_Write(system, NULL, quest_offset + (large ? QUEST_SIZE_LARGE : QUEST_SIZE_SMALL) * i, quest_delete, 8, FS_WRITE_FLUSH);
+    }
+    if (res != 0) {
+        ui_info_add("\x1b[31;1mfailure.\x1b[0m\n");
+        ui_pause("Error: Unable to clear other quests");
+        return 0;
+    }
     ui_info_add("\x1b[32;1msuccess.\x1b[0m\n");
     return 1;
 }
@@ -272,7 +282,7 @@ int main(int argc, char* argv[]) {
     while (aptMainLoop()) {
         FS_Archive extdata;
         Handle system;
-        int game = select_game("\x1b[32;1mGenHax Installer (v1.0.1)\x1b[0m\n\nSelect a game ...", "Selected game ...", &extdata, &system);
+        int game = select_game("\x1b[32;1mGenHax Installer (v1.0.2)\x1b[0m\n\nSelect a game ...", "Selected game ...", &extdata, &system);
         char file_path[50] = "";
         if (game == -1)
             break;
